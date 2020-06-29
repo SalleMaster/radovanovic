@@ -31,7 +31,7 @@ img {
 
 // HTML & Body
 html {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 body {
@@ -121,6 +121,10 @@ p {
 }
 
 @media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
   .container {
     width: 720px;
   }

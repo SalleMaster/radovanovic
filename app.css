@@ -18,7 +18,7 @@ img {
 }
 
 html {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 body {
@@ -110,6 +110,9 @@ p {
 }
 
 @media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
   .container {
     width: 720px;
   }
@@ -133,6 +136,7 @@ p {
   display: inline-block;
   padding: 0.5rem 1rem;
   transition: color 0.3s ease-in-out;
+  font-size: 1.25rem;
 }
 
 .btn span:first-child {
@@ -207,6 +211,8 @@ p {
 }
 
 .nav {
+  position: fixed;
+  width: 100%;
   padding: 1rem 10%;
   z-index: 1000;
 }
@@ -340,4 +346,36 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   .burger-menu {
     display: none;
   }
+}
+
+.hero .container .header-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero .container .header-wrapper .headline {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.hero .container .header-wrapper .buttons-wrapper {
+  margin-top: 2rem;
+}
+
+.hero .container .header-wrapper .buttons-wrapper .btn {
+  margin-right: 1rem;
+}
+
+.hero .container .header-wrapper img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 80%;
+  width: auto;
+  opacity: 0.5;
+  z-index: -1;
 }
