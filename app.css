@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background: none;
+  color: #f12d2d;
+}
+
 a {
   text-decoration: none;
 }
@@ -125,8 +130,20 @@ p {
 }
 
 @media (min-width: 1200px) {
+  html {
+    font-size: 17px;
+  }
   .container {
     width: 1140px;
+  }
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 20px;
+  }
+  .container {
+    width: 1300px;
   }
 }
 
@@ -348,6 +365,10 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   }
 }
 
+.hero {
+  position: relative;
+}
+
 .hero .container .header-wrapper {
   position: relative;
   min-height: 100vh;
@@ -356,10 +377,14 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   justify-content: center;
 }
 
+.hero .container .header-wrapper h5 {
+  margin: 1rem 0;
+}
+
 .hero .container .header-wrapper .headline {
   font-size: 4rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .hero .container .header-wrapper .buttons-wrapper {
@@ -374,8 +399,58 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 80%;
+  height: 30%;
   width: auto;
-  opacity: 0.5;
   z-index: -1;
+}
+
+.hero .social {
+  position: absolute;
+  left: 1rem;
+  bottom: 2rem;
+}
+
+.hero .social a {
+  display: block;
+  margin: 0.8rem 0;
+  font-size: 1.2rem;
+  color: #010101;
+}
+
+.hero .social a:hover {
+  opacity: 0.5;
+}
+
+@media (min-width: 576px) {
+  .hero .container .header-wrapper .headline {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .hero .container .header-wrapper img {
+    height: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero .container .header-wrapper .headline {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .hero .container .header-wrapper img {
+    height: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero .container .header-wrapper .headline {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.3;
+    width: 70%;
+  }
+  .hero .container .header-wrapper img {
+    height: 85%;
+  }
 }
