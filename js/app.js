@@ -19,16 +19,16 @@ links.forEach((link) => {
 });
 
 // GSAP Hero Animation
-
 window.addEventListener('load', (event) => {
-  // var rule = CSSRulePlugin.getRule('.header-anim2:after'); //get the rule
-  // gsap.to(rule, { duration: 3, cssRule: { color: 'blue' } });
-
   var tl = gsap.timeline();
 
-  tl.from('.header-anim1', { duration: 1, opacity: 0 })
-    .from('.header-anim2', { duration: 2, opacity: 0 })
+  tl.to('.loading-anim1', { duration: 2, opacity: 0 })
+    .to('.loading-anim2', { duration: 1, opacity: 1 })
+    .to('.loading-anim2', { duration: 0.5, opacity: 0 })
+    .to('.loading-screen', { duration: 1, scaleY: 0 })
+    .from('.header-anim1', { duration: 1, opacity: 0 })
+    .from('.header-anim2-overlay', { duration: 2, scaleY: 1 })
     .from('.header-anim3', { duration: 0.7, opacity: 0 })
-    .from('.header-anim4', { duration: 0.7, opacity: 0 });
-  // .from('.header-anim5', { duration: 2, opacity: 0 });
+    .from('.header-anim4', { duration: 0.7, opacity: 0 })
+    .from('.header-anim5', { duration: 2, opacity: 0 }, '-=1.4');
 });
