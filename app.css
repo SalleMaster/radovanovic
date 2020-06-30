@@ -415,6 +415,7 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   margin: 0.8rem 0;
   font-size: 1.2rem;
   color: #010101;
+  transition: all 0.2s ease-in-out;
 }
 
 .hero .social a:hover {
