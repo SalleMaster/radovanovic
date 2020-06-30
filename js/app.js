@@ -22,8 +22,8 @@ links.forEach((link) => {
 window.addEventListener('load', (event) => {
   var tl = gsap.timeline();
 
-  tl.to('.loading-anim1', { duration: 2, opacity: 0 })
-    .to('.loading-anim2', { duration: 1, opacity: 1 })
+  tl.to('.loading-anim1', { duration: 1, opacity: 0 })
+    .to('.loading-anim2', { duration: 0.5, opacity: 1 })
     .to('.loading-anim2', { duration: 0.5, opacity: 0 })
     .to('.loading-screen', { duration: 1, scaleY: 0 })
     .from('.header-anim1', { duration: 1, opacity: 0 })
@@ -31,4 +31,10 @@ window.addEventListener('load', (event) => {
     .from('.header-anim3', { duration: 0.7, opacity: 0 })
     .from('.header-anim4', { duration: 0.7, opacity: 0 })
     .from('.header-anim5', { duration: 2, opacity: 0 }, '-=1.4');
+
+  const html = document.querySelector('html');
+
+  setTimeout(() => {
+    html.style.overflow = 'auto';
+  }, 2000);
 });
