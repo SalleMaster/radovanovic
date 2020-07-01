@@ -83,4 +83,26 @@
 .section {
   margin: 5rem 0;
   padding: 5rem 0;
+
+  .container {
+    h1 {
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+// Line
+body {
+  .line {
+    width: 100%;
+    height: 1px;
+    background: $black;
+    opacity: 0.1;
+  }
+
+  &.bg-black {
+    .line {
+      background: $white;
+    }
+  }
 }

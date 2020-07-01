@@ -50,30 +50,45 @@ window.addEventListener('load', (event) => {
 });
 
 // Fade In Left & Right
-const fadeInLeft = document.querySelectorAll('.fade-in-left');
-const fadeInRight = document.querySelectorAll('.fade-in-right');
+// const fadeInLeft = document.querySelectorAll('.fade-in-left');
+// const fadeInRight = document.querySelectorAll('.fade-in-right');
 
-fadeInLeft.forEach((fadeIn) => {
-  gsap.from(fadeIn, {
+// fadeInLeft.forEach((fadeIn) => {
+//   gsap.from(fadeIn, {
+//     scrollTrigger: {
+//       // markers: true,
+//       trigger: fadeIn,
+//       start: 'bottom bottom', // when the Bottom of the trigger hits the Bottom of the viewport
+//     },
+//     duration: 3,
+//     ease: 'power4.out',
+//     opacity: '0',
+//   });
+// });
+
+// fadeInRight.forEach((fadeIn) => {
+//   gsap.from(fadeIn, {
+//     scrollTrigger: {
+//       trigger: fadeIn,
+//       start: 'bottom bottom', // when the Bottom of the trigger hits the Bottom of the viewport
+//     },
+//     duration: 3,
+//     ease: 'power4.out',
+//     opacity: '0',
+//   });
+// });
+
+// Basic Fade In
+const fadeIn = document.querySelectorAll('.fade-in');
+
+fadeIn.forEach((fade) => {
+  gsap.from(fade, {
     scrollTrigger: {
-      // markers: true,
-      trigger: fadeIn,
+      trigger: fade,
       start: 'bottom bottom', // when the Bottom of the trigger hits the Bottom of the viewport
     },
-    // duration: 1.5,
-    // ease: 'power4.out',
-    x: '-300',
-    opacity: '0',
-  });
-});
-
-fadeInRight.forEach((fadeIn) => {
-  gsap.from(fadeIn, {
-    scrollTrigger: {
-      trigger: fadeIn,
-      start: 'bottom bottom', // when the Bottom of the trigger hits the Bottom of the viewport
-    },
-    x: '300',
+    duration: 3,
+    ease: 'power4.out',
     opacity: '0',
   });
 });
