@@ -22,19 +22,58 @@ links.forEach((link) => {
 window.addEventListener('load', (event) => {
   var tl = gsap.timeline();
 
+  // tl.to('.loading-anim1', { duration: 1, opacity: 0 })
+  //   .to('.loading-anim2', { duration: 0.5, opacity: 1 })
+  //   .to('.loading-anim2', { duration: 0.5, opacity: 0 })
+  //   .to('.loading-screen', { duration: 1, scaleY: 0 })
+  //   .from('.header-anim1', { duration: 1, opacity: 0 })
+  //   .from('.header-anim2-overlay', { duration: 2, scaleY: 1 })
+  //   .from('.header-anim3', { duration: 0.7, opacity: 0 })
+  //   .from('.header-anim4', { duration: 0.7, opacity: 0 })
+  //   .from('.header-anim5', { duration: 2, opacity: 0 }, '-=1.4');
+
   tl.to('.loading-anim1', { duration: 1, opacity: 0 })
     .to('.loading-anim2', { duration: 0.5, opacity: 1 })
     .to('.loading-anim2', { duration: 0.5, opacity: 0 })
     .to('.loading-screen', { duration: 1, scaleY: 0 })
     .from('.header-anim1', { duration: 1, opacity: 0 })
-    .from('.header-anim2-overlay', { duration: 2, scaleY: 1 })
-    .from('.header-anim3', { duration: 0.7, opacity: 0 })
-    .from('.header-anim4', { duration: 0.7, opacity: 0 })
-    .from('.header-anim5', { duration: 2, opacity: 0 }, '-=1.4');
+    .from('.header-anim2-overlay', { duration: 2, scaleY: 1 }, '-=1')
+    .from('.header-anim3', { duration: 1, opacity: 0 }, '-=2')
+    .from('.header-anim4', { duration: 1, opacity: 0 }, '-=2')
+    .from('.header-anim5', { duration: 2, opacity: 0 }, '-=2');
 
   const html = document.querySelector('html');
 
   setTimeout(() => {
     html.style.overflow = 'auto';
   }, 2000);
+});
+
+// Fade In Left & Right
+const fadeInLeft = document.querySelectorAll('.fade-in-left');
+const fadeInRight = document.querySelectorAll('.fade-in-right');
+
+fadeInLeft.forEach((fadeIn) => {
+  gsap.from(fadeIn, {
+    scrollTrigger: {
+      // markers: true,
+      trigger: fadeIn,
+      start: 'bottom bottom', // when the Bottom of the trigger hits the Bottom of the viewport
+    },
+    // duration: 1.5,
+    // ease: 'power4.out',
+    x: '-300',
+    opacity: '0',
+  });
+});
+
+fadeInRight.forEach((fadeIn) => {
+  gsap.from(fadeIn, {
+    scrollTrigger: {
+      trigger: fadeIn,
+      start: 'bottom bottom', // when the Bottom of the trigger hits the Bottom of the viewport
+    },
+    x: '300',
+    opacity: '0',
+  });
 });
