@@ -697,7 +697,7 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   .skills-section .container .skills-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5rem;
+    gap: 6rem;
   }
 }
 
@@ -705,7 +705,7 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   .skills-section .container .skills-wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 4rem;
+    gap: 5rem;
   }
 }
 
@@ -713,6 +713,47 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   .skills-section .container .skills-wrapper {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 4rem;
+    gap: 5rem;
   }
+}
+
+.contact-section .container .contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+}
+
+.contact-section .container .contact-wrapper .contact-info .box {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 1rem;
+}
+
+.contact-section .container .contact-wrapper .contact-info .box h4 {
+  margin-bottom: 1rem;
+  margin-right: auto;
+}
+
+.contact-section .container .contact-wrapper .contact-info .box a {
+  margin-right: auto;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.contact-section .container .contact-wrapper .contact-info .box a:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #010101;
+  transition: all 0.3s ease;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.contact-section .container .contact-wrapper .contact-info .box a:hover:after {
+  transform: scaleX(1);
 }

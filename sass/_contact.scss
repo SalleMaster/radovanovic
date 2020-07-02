@@ -1,0 +1,49 @@
+// Contact
+.contact-section {
+  .container {
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 5rem;
+
+      .contact-info {
+        .box {
+          display: flex;
+          flex-direction: column;
+          align-items: left;
+          margin-bottom: 1rem;
+
+          h4 {
+            margin-bottom: 1rem;
+            margin-right: auto;
+          }
+
+          a {
+            margin-right: auto;
+            margin-bottom: 1.2rem;
+            position: relative;
+
+            &:after {
+              position: absolute;
+              content: '';
+              bottom: -3px;
+              left: 0;
+              height: 1px;
+              width: 100%;
+              background: $black;
+              transition: all 0.3s ease;
+              transform-origin: left;
+              transform: scaleX(0);
+            }
+
+            &:hover {
+              &:after {
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

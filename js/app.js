@@ -92,3 +92,74 @@ fadeIn.forEach((fade) => {
     opacity: '0',
   });
 });
+
+// Skills Animation
+
+let skillsTimeline = gsap.timeline({
+  // yes, we can add it to an entire timeline!
+  scrollTrigger: {
+    trigger: '.skills-section',
+    // pin: true, // pin the trigger element while active
+    start: 'top center', // when the top of the trigger hits the top of the viewport
+    // end: '+=500', // end after scrolling 500px beyond the start
+    // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+    // snap: {
+    //   snapTo: 'labels', // snap to the closest label in the timeline
+    //   duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+    //   delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+    //   ease: 'power1.inOut', // the ease of the snap animation ("power3" by default)
+    // },
+  },
+});
+
+// add animations and labels to the timeline
+skillsTimeline
+  .from('.skill-anim1', { duration: 0.3, scale: 0 })
+  .from('.skill-anim2', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim3', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim4', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim5', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim6', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim7', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim8', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim9', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim10', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim11', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim12', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim13', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim14', { duration: 0.3, scale: 0 }, '-=.1');
+
+// Toggle Body Background
+const body = document.querySelector('body');
+
+const bgBlack = () => {
+  body.classList.add('bg-black');
+};
+
+const bgWhite = () => {
+  body.classList.remove('bg-black');
+};
+
+// Hero Trigger
+ScrollTrigger.create({
+  // markers: true,
+  trigger: '.hero',
+  start: 'top bottom',
+  endTrigger: '.hero',
+  end: 'bottom top',
+  onEnter: () => bgWhite(),
+  onLeave: () => bgBlack(),
+  onEnterBack: () => bgWhite(),
+});
+
+// Skills Trigger
+ScrollTrigger.create({
+  // markers: true,
+  trigger: '.skills-section',
+  start: 'center bottom',
+  endTrigger: '.skills-section',
+  end: 'top center',
+  onEnter: () => bgBlack(),
+  onLeave: () => bgWhite(),
+  onEnterBack: () => bgBlack(),
+});
