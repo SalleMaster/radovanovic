@@ -163,3 +163,11 @@ ScrollTrigger.create({
   onLeave: () => bgWhite(),
   onEnterBack: () => bgBlack(),
 });
+
+// Footer Year
+const year = document.querySelector('.year');
+
+const date = new Date();
+const currentYear = date.getFullYear();
+
+year.innerHTML = currentYear;

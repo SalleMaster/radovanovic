@@ -443,9 +443,59 @@
               </a>
             </div>
           </div>
+
+          <div class="contact-form-wrapper">
+            <h4>Send Me A Message</h4>
+            <form name="contact" method="POST" data-netlify="true">
+              <div class="form-box">
+                <label for="name"><h5>Name</h5></label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  class="form-control font-secondary"
+                />
+              </div>
+              <div class="form-box">
+                <label for="email"><h5>Email</h5></label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  required
+                  class="form-control font-secondary"
+                />
+              </div>
+              <div class="form-box">
+                <label for="message"><h5>Message</h5></label>
+                <textarea
+                  name="message"
+                  id="message"
+                  class="form-control font-secondary"
+                  rows="5"
+                  cols="50"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-box">
+                <button type="submit" class="btn btn-white">
+                  <span>Send Message</span>
+                  <span>Send Message</span>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <p class="text-extra-small opacity-5">
+        <span class="year"></span> &copy; - radovanović
+      </p>
+    </footer>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>

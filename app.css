@@ -757,3 +757,131 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
 .contact-section .container .contact-wrapper .contact-info .box a:hover:after {
   transform: scaleX(1);
 }
+
+.contact-section .container .contact-wrapper .contact-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #010101;
+  color: #fafafa;
+  padding: 3rem 5rem;
+}
+
+.contact-section .container .contact-wrapper .contact-form-wrapper h4 {
+  align-self: center;
+  margin-bottom: 2rem;
+}
+
+.contact-section .container .contact-wrapper .contact-form-wrapper form .form-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.contact-section .container .contact-wrapper .contact-form-wrapper form .form-box label {
+  margin-bottom: 0.5rem;
+}
+
+.contact-section .container .contact-wrapper .contact-form-wrapper form .form-box .form-control {
+  padding: 0.7rem 0.5rem;
+  font-size: 1rem;
+  background: #171717;
+  color: #fafafa;
+  border: none;
+  border-bottom: 1px solid #171717;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.contact-section .container .contact-wrapper .contact-form-wrapper form .form-box .form-control:focus {
+  background: #373737;
+  border-bottom: 1px solid #fafafa;
+  outline: none;
+}
+
+.contact-section .container .contact-wrapper .contact-form-wrapper form .form-box button {
+  margin-right: auto;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .contact-section .container .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+  }
+  .contact-section .container .contact-wrapper .contact-info .box {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 1rem;
+  }
+  .contact-section .container .contact-wrapper .contact-info .box h4 {
+    margin-bottom: 1rem;
+    margin-right: auto;
+  }
+  .contact-section .container .contact-wrapper .contact-info .box a {
+    margin-right: auto;
+    margin-bottom: 1.2rem;
+    position: relative;
+  }
+  .contact-section .container .contact-wrapper .contact-info .box a:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #010101;
+    transition: all 0.3s ease;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  .contact-section .container .contact-wrapper .contact-info .box a:hover:after {
+    transform: scaleX(1);
+  }
+  .contact-section .container .contact-wrapper .contact-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: #010101;
+    color: #fafafa;
+    padding: 3rem 5rem;
+  }
+  .contact-section .container .contact-wrapper .contact-form-wrapper h4 {
+    align-self: center;
+    margin-bottom: 2rem;
+  }
+  .contact-section .container .contact-wrapper .contact-form-wrapper form .form-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .contact-section .container .contact-wrapper .contact-form-wrapper form .form-box label {
+    margin-bottom: 0.5rem;
+  }
+  .contact-section .container .contact-wrapper .contact-form-wrapper form .form-box .form-control {
+    padding: 0.7rem 0.5rem;
+    font-size: 1rem;
+    background: #171717;
+    color: #fafafa;
+    border: none;
+    border-bottom: 1px solid #171717;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .contact-section .container .contact-wrapper .contact-form-wrapper form .form-box .form-control:focus {
+    background: #373737;
+    border-bottom: 1px solid #fafafa;
+    outline: none;
+  }
+  .contact-section .container .contact-wrapper .contact-form-wrapper form .form-box button {
+    margin-right: auto;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.footer {
+  background: #010101;
+  color: #fafafa;
+  padding: 1.5rem;
+  text-align: center;
+}
