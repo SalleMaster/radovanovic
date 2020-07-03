@@ -421,7 +421,7 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 30%;
+  height: 25%;
   width: auto;
   z-index: -1;
 }
