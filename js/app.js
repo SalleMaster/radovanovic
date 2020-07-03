@@ -23,7 +23,7 @@ const navLogo = document.querySelector('.nav-logo');
 navLogo.addEventListener('click', removeNavbar);
 
 // GSAP Hero Animation
-window.addEventListener('load', (event) => {
+document.addEventListener('DOMContentLoaded', (event) => {
   var tl = gsap.timeline();
 
   // tl.to('.loading-anim1', { duration: 1, opacity: 0 })
@@ -91,9 +91,9 @@ fadeIn.forEach((fade) => {
       trigger: fade,
       start: 'bottom bottom', // when the Bottom of the trigger hits the Bottom of the viewport
     },
-    duration: 1,
-    // ease: 'power1.easeOut',
-    y: 15,
+    duration: 1.5,
+    // ease: 'power4.out',
+    y: 30,
     opacity: '0',
   });
 });
@@ -119,20 +119,20 @@ let skillsTimeline = gsap.timeline({
 
 // add animations and labels to the timeline
 skillsTimeline
-  .from('.skill-anim1', { duration: 0.2, scale: 0 })
-  .from('.skill-anim2', { duration: 0.2, scale: 0 }, '-=.1')
-  .from('.skill-anim3', { duration: 0.2, scale: 0 }, '-=.1')
-  .from('.skill-anim4', { duration: 0.2, scale: 0 }, '-=.1')
-  .from('.skill-anim5', { duration: 0.2, scale: 0 }, '-=.1')
-  .from('.skill-anim6', { duration: 0.2, scale: 0 }, '-=.1')
-  .from('.skill-anim7', { duration: 0.2, scale: 0 }, '-=.1')
-  .from('.skill-anim8', { duration: 0.2, scale: 0 }, '-=.1')
-  .from('.skill-anim9', { duration: 0.2, scale: 0 }, '-=.1')
-  .from('.skill-anim10', { duration: 0.2, scale: 0 }, '-=.1')
-  .from('.skill-anim11', { duration: 0.2, scale: 0 }, '-=.1')
-  .from('.skill-anim12', { duration: 0.2, scale: 0 }, '-=.1')
-  .from('.skill-anim13', { duration: 0.2, scale: 0 }, '-=.1')
-  .from('.skill-anim14', { duration: 0.2, scale: 0 }, '-=.1');
+  .from('.skill-anim1', { duration: 0.3, scale: 0 })
+  .from('.skill-anim2', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim3', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim4', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim5', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim6', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim7', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim8', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim9', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim10', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim11', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim12', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim13', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim14', { duration: 0.3, scale: 0 }, '-=.1');
 
 // Toggle Body Background
 const body = document.querySelector('body');
