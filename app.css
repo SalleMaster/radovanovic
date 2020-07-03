@@ -801,6 +801,8 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   margin-right: auto;
   border: none;
   cursor: pointer;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
 @media (min-width: 992px) {
