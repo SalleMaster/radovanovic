@@ -18,6 +18,10 @@ links.forEach((link) => {
   link.addEventListener('click', removeNavbar);
 });
 
+const navLogo = document.querySelector('.nav-logo');
+
+navLogo.addEventListener('click', removeNavbar);
+
 // GSAP Hero Animation
 window.addEventListener('load', (event) => {
   var tl = gsap.timeline();
@@ -87,8 +91,9 @@ fadeIn.forEach((fade) => {
       trigger: fade,
       start: 'bottom bottom', // when the Bottom of the trigger hits the Bottom of the viewport
     },
-    duration: 3,
-    ease: 'power4.out',
+    duration: 1,
+    // ease: 'power1.easeOut',
+    y: 15,
     opacity: '0',
   });
 });
@@ -152,7 +157,7 @@ ScrollTrigger.create({
   onEnterBack: () => bgWhite(),
 });
 
-// Skills Trigger
+// // Skills Trigger
 ScrollTrigger.create({
   // markers: true,
   trigger: '.skills-section',
@@ -171,3 +176,10 @@ const date = new Date();
 const currentYear = date.getFullYear();
 
 year.innerHTML = currentYear;
+
+// Scroll to top on Load & Refresh
+history.scrollRestoration = 'manual';
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};

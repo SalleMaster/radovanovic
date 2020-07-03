@@ -25,6 +25,7 @@ img {
 html {
   font-size: 12px;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
