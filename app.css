@@ -461,6 +461,7 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   right: 0;
   top: 50%;
   background: #010101;
+  transform: translateY(-50%);
 }
 
 .language .language-wrapper {
