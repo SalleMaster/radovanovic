@@ -117,6 +117,17 @@
     .menu-responsive-link {
       margin-bottom: 1rem;
       font-size: 4rem;
+
+      &.link-sm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+
+        .link {
+          margin: 1rem 1rem;
+        }
+      }
     }
   }
 

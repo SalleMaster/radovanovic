@@ -71,6 +71,39 @@
   }
 }
 
+.language {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  background: $black;
+
+  .language-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+
+    .language-link {
+      color: $white;
+      font-size: 0.7rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $red;
+      }
+    }
+
+    .language-line {
+      width: 1px;
+      height: 1rem;
+      background: $white;
+      margin: 0.5rem 0;
+    }
+  }
+}
+
 // Responsive Media Queries
 @media (min-width: 576px) {
   .hero {
@@ -121,6 +154,10 @@
         }
       }
     }
+  }
+
+  .language {
+    display: flex;
   }
 }
 
