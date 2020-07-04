@@ -888,3 +888,22 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   padding: 1.5rem;
   text-align: center;
 }
+
+.thanks-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.thanks-section .container .thanks-wrapper h2 {
+  margin-bottom: 3rem;
+}
+
+.thanks-section .container .thanks-wrapper h5 {
+  margin-bottom: 1rem;
+}
+
+.thanks-section .container .thanks-wrapper a {
+  margin-top: 2rem;
+}
