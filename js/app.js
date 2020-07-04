@@ -178,8 +178,8 @@ const currentYear = date.getFullYear();
 year.innerHTML = currentYear;
 
 // Scroll to top on Load & Refresh
-history.scrollRestoration = 'manual';
+// history.scrollRestoration = 'manual';
 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
+// window.onbeforeunload = function () {
+//   window.scrollTo(0, 0);
+// };
