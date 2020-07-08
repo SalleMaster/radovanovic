@@ -807,6 +807,10 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   transform: scaleX(1);
 }
 
+.contact-section .container .contact-wrapper .contact-info .box a .margin-3px {
+  margin-right: 3px;
+}
+
 .contact-section .container .contact-wrapper .contact-form-wrapper {
   display: flex;
   flex-direction: column;
