@@ -623,6 +623,10 @@ body.bg-black .menu-responsive .menu-responsive-links .menu-responsive-link .lin
   line-height: 1.5;
 }
 
+.about-section .container .about-wrapper .about-box h5 a .fa-file-download {
+  margin-right: 0.5rem;
+}
+
 @media (min-width: 992px) {
   .about-section .container .about-wrapper {
     display: grid;
