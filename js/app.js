@@ -1,30 +1,30 @@
 // Navbar Toggle
-burgerMenu = document.querySelector('.burger-menu');
-menuResponsive = document.querySelector('.menu-responsive');
-links = document.querySelectorAll('.link');
+burgerMenu = document.querySelector('.burger-menu')
+menuResponsive = document.querySelector('.menu-responsive')
+links = document.querySelectorAll('.link')
 
 const toggleNavbar = () => {
-  burgerMenu.classList.toggle('active');
-  menuResponsive.classList.toggle('active');
-};
+  burgerMenu.classList.toggle('active')
+  menuResponsive.classList.toggle('active')
+}
 
 const removeNavbar = () => {
-  burgerMenu.classList.remove('active');
-  menuResponsive.classList.remove('active');
-};
+  burgerMenu.classList.remove('active')
+  menuResponsive.classList.remove('active')
+}
 
-burgerMenu.addEventListener('click', toggleNavbar);
+burgerMenu.addEventListener('click', toggleNavbar)
 links.forEach((link) => {
-  link.addEventListener('click', removeNavbar);
-});
+  link.addEventListener('click', removeNavbar)
+})
 
-const navLogo = document.querySelector('.nav-logo');
+const navLogo = document.querySelector('.nav-logo')
 
-navLogo.addEventListener('click', removeNavbar);
+navLogo.addEventListener('click', removeNavbar)
 
 // GSAP Hero Animation
 document.addEventListener('DOMContentLoaded', (event) => {
-  var tl = gsap.timeline();
+  var tl = gsap.timeline()
 
   // tl.to('.loading-anim1', { duration: 1, opacity: 0 })
   //   .to('.loading-anim2', { duration: 0.5, opacity: 1 })
@@ -44,14 +44,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     .from('.header-anim2-overlay', { duration: 2, scaleY: 1 }, '-=1')
     .from('.header-anim3', { duration: 1, opacity: 0 }, '-=2')
     .from('.header-anim4', { duration: 1, opacity: 0 }, '-=2')
-    .from('.header-anim5', { duration: 2, opacity: 0 }, '-=2');
+    .from('.header-anim5', { duration: 2, opacity: 0 }, '-=2')
 
-  const html = document.querySelector('html');
+  const html = document.querySelector('html')
 
   setTimeout(() => {
-    html.style.overflow = 'auto';
-  }, 2000);
-});
+    html.style.overflow = 'auto'
+  }, 2000)
+})
 
 // Fade In Left & Right
 // const fadeInLeft = document.querySelectorAll('.fade-in-left');
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 // });
 
 // Basic Fade In
-const fadeIn = document.querySelectorAll('.fade-in');
+const fadeIn = document.querySelectorAll('.fade-in')
 
 fadeIn.forEach((fade) => {
   gsap.from(fade, {
@@ -95,8 +95,8 @@ fadeIn.forEach((fade) => {
     // ease: 'power4.out',
     y: 30,
     opacity: '0',
-  });
-});
+  })
+})
 
 // Skills Animation
 
@@ -115,7 +115,7 @@ let skillsTimeline = gsap.timeline({
     //   ease: 'power1.inOut', // the ease of the snap animation ("power3" by default)
     // },
   },
-});
+})
 
 // add animations and labels to the timeline
 skillsTimeline
@@ -132,18 +132,21 @@ skillsTimeline
   .from('.skill-anim11', { duration: 0.3, scale: 0 }, '-=.1')
   .from('.skill-anim12', { duration: 0.3, scale: 0 }, '-=.1')
   .from('.skill-anim13', { duration: 0.3, scale: 0 }, '-=.1')
-  .from('.skill-anim14', { duration: 0.3, scale: 0 }, '-=.1');
+  .from('.skill-anim14', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim15', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim16', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim17', { duration: 0.3, scale: 0 }, '-=.1')
 
 // Toggle Body Background
-const body = document.querySelector('body');
+const body = document.querySelector('body')
 
 const bgBlack = () => {
-  body.classList.add('bg-black');
-};
+  body.classList.add('bg-black')
+}
 
 const bgWhite = () => {
-  body.classList.remove('bg-black');
-};
+  body.classList.remove('bg-black')
+}
 
 // Hero Trigger
 ScrollTrigger.create({
@@ -155,7 +158,7 @@ ScrollTrigger.create({
   onEnter: () => bgWhite(),
   onLeave: () => bgBlack(),
   onEnterBack: () => bgWhite(),
-});
+})
 
 // // Skills Trigger
 ScrollTrigger.create({
@@ -167,15 +170,15 @@ ScrollTrigger.create({
   onEnter: () => bgBlack(),
   onLeave: () => bgWhite(),
   onEnterBack: () => bgBlack(),
-});
+})
 
 // Footer Year
-const year = document.querySelector('.year');
+const year = document.querySelector('.year')
 
-const date = new Date();
-const currentYear = date.getFullYear();
+const date = new Date()
+const currentYear = date.getFullYear()
 
-year.innerHTML = currentYear;
+year.innerHTML = currentYear
 
 // Scroll to top on Load & Refresh
 // history.scrollRestoration = 'manual';
