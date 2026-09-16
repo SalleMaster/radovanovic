@@ -136,6 +136,7 @@ skillsTimeline
   .from('.skill-anim15', { duration: 0.3, scale: 0 }, '-=.1')
   .from('.skill-anim16', { duration: 0.3, scale: 0 }, '-=.1')
   .from('.skill-anim17', { duration: 0.3, scale: 0 }, '-=.1')
+  .from('.skill-anim18', { duration: 0.3, scale: 0 }, '-=.1')
 
 // Toggle Body Background
 const body = document.querySelector('body')
